@@ -606,51 +606,57 @@ button {
 
 /* -------Form Subscribe-------- */
 
-.form-subscribe {
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
+.container-subscribe {
   margin-left: 80px;
   border: none;
-  max-width: 300px;
 }
-
-.subscribe-email {
-  display: flex;
-  padding: 8px 16px;
-  margin-top: 16px;
-  width: 264px;
-  height: 40px;
-  background-color: var(--navyblue);
+.subscribe-label-title {
+  margin-bottom: 16px;
   color: var(--white);
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 2;
-  border-radius: 4px;
-  border: 1px solid var(--white, #fff);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-}
-.subscribe-email::placeholder {
-  color: var(--white);
-  font-size: 12px;
-  font-weight: 400;
-}
-.subscribe-btn {
-  min-width: 169px;
-  max-height: 56px;
-  margin-top: 40px;
-  display: inline-flex;
-  color: var(--white);
-  text-align: center;
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  padding: 8px 24px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.form-subscribe {
+  display: flex;
+  gap: 24px;
+}
+
+.subscribe-email {
+  width: 264px;
+  height: 40px;
+  background-color: transparent;
+  color: var(--white);
+  padding-left: 16px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1, 5;
+  letter-spacing: 0.04em;
+  border-radius: 4px;
+  border: 1px solid var(--white, #fff);
+  filter: drop-shadow(0px 4px 4px 0px rgba(0, 0, 0, 0.15));
+}
+.subscribe-email::placeholder {
+  color: var(--white);
+}
+.subscribe-btn {
+  min-width: 165px;
+  height: 40px;
+  display: flex;
+  color: var(--white);
+  text-align: center;
   justify-content: center;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1, 5;
+  letter-spacing: 0.04em;
   align-items: center;
-  gap: 16px;
   border: none;
   border-radius: 4px;
   background-color: var(--iris);
@@ -663,6 +669,7 @@ button {
 }
 
 .subscribe-btn .icons {
+  margin-left: 16px;
   fill: var(--white);
   background-color: var(--iris);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -670,15 +677,6 @@ button {
 .subscribe-btn:hover .icons,
 .subscribe-btn:focus .icons {
   background-color: var(--ocean);
-}
-.subscribe-label {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  color: var(--white);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
 }
 
 /* -------Modal-------- */
@@ -761,17 +759,24 @@ button {
   color: var(--navyblue);
   text-align: center;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
 }
 .form-modal {
   display: flex;
   flex-direction: column;
-  margin-top: 16px;
+
   border: none;
   max-width: 360px;
   min-height: 336px;
 }
 .label-container {
   margin-bottom: 8px;
+}
+.label-container-comment {
+  margin-bottom: 16px;
 }
 .modal-contact-input {
   position: relative;
@@ -783,19 +788,18 @@ button {
   transform: translateY(-50%);
 
   fill: var(--navyblue);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-label {
-  display: flex;
+  display: block;
   flex-direction: column;
-  margin: 0 auto;
-  gap: 4px;
+  margin-bottom: 4px;
   color: var(--lightslate);
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.17;
+  letter-spacing: 0.04em;
 }
 .modal-contact {
   display: flex;
@@ -826,15 +830,19 @@ button {
   display: flex;
   padding: 8px 16px;
   width: 360px;
-  min-height: 120px;
+  height: 120px;
   flex-shrink: 0;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   border: 1px solid var(--navyblue-modal);
+  background-color: transparent;
   outline: transparent;
+  resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-comment:focus {
@@ -842,15 +850,14 @@ button {
 }
 .checkbox-container {
   display: inline-flex;
-  margin-top: 16px;
+  margin-bottom: 24px;
 }
 .modal-label-checkbox {
-  display: inline-flex;
-  padding: 0;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.17;
+  letter-spacing: 0.04em;
   color: var(--lightslate);
 }
 .agree-click {
@@ -860,19 +867,26 @@ button {
   min-height: 40px;
   flex-shrink: 0;
 }
+.agree-click:checked .checkbox {
+  background-color: var(--ocean);
+  border: none;
+  fill: var(--cloud);
+}
 .checkbox {
   display: inline-flex;
-  max-width: 16px;
-  max-height: 16px;
+  width: 16px;
+  height: 16px;
   padding: 4px 3px;
   margin-right: 8px;
   background-color: transparent;
-  border: 1px solid var(--navyblue-modal);
-  border-radius: 4px;
+  fill: transparent;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
   align-items: center;
   justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox:hover,
 .checkbox:focus {
@@ -892,14 +906,12 @@ button {
 }
 .policy {
   color: var(--iris);
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.33;
   text-decoration-line: underline;
 }
 .modal-btn {
-  max-width: 169px;
+  display: block;
+  margin: 0 auto;
+  min-width: 169px;
   height: 56px;
   color: var(--white);
   font-family: "Roboto", sans-serif;
@@ -908,10 +920,6 @@ button {
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
-
-  padding: 16px 32px;
-  margin: 24px 96px 0 95px;
-  align-items: center;
   border: none;
   border-radius: 4px;
   background-color: var(--iris);

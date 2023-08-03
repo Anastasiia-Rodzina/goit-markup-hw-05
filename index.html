@@ -426,9 +426,10 @@
           </ul>
         </div>
 
-        <form class="form-subscribe" name="Subscribe" autocomplete="on">
-          <div class="">
-            <label class="subscribe-label" for="email"> Subscribe</label>
+        <div class="container-subscribe">
+          <p class="subscribe-label-title">Subscribe</p>
+          <form class="form-subscribe" name="Subscribe" autocomplete="on">
+            <label class="subscribe-label" for="email"></label>
             <input
               class="subscribe-email"
               type="email"
@@ -436,15 +437,15 @@
               placeholder="E-mail"
               id="email"
             />
-          </div>
 
-          <button class="subscribe-btn" type="submit">
-            Subscribe
-            <svg class="icons" width="24" height="24">
-              <use href="./images/icons.svg#icon-subscribe"></use>
-            </svg>
-          </button>
-        </form>
+            <button class="subscribe-btn" type="submit">
+              Subscribe
+              <svg class="icons" width="24" height="24">
+                <use href="./images/icons.svg#icon-subscribe"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -456,21 +457,21 @@
           </svg>
         </button>
 
-        <b class="title-modal text"
-          >Leave your contacts and we will call you back</b
-        >
+        <p class="title-modal text">
+          Leave your contacts and we will call you back
+        </p>
 
         <form class="form-modal" name="Modal contacts">
           <div class="label-container">
-            <label class="modal-label" for="username"> Name</label>
+            <label class="modal-label" for="user-name"> Name</label>
 
             <div class="modal-contact-input">
               <input
                 class="modal-contact"
                 type="text"
-                name="username"
+                name="user-name"
                 autofocus
-                id="username"
+                id="user-name"
               />
               <svg class="icons" width="18" height="24">
                 <use href="./images/icons.svg#icon-person"></use>
@@ -505,34 +506,35 @@
             </div>
           </div>
 
-          <div class="label-container">
-            <label class="modal-label" for="comment"> Comment</label>
+          <div class="label-container-comment">
+            <label class="modal-label" for="user-comment"> Comment</label>
             <textarea
               class="modal-comment"
-              name="comment"
+              name="user-comment"
               placeholder="Text input"
               rows="5"
-              id="comment"
+              id="user-comment"
             ></textarea>
           </div>
 
           <div class="checkbox-container">
-            <span class="checkbox">
-              <svg class="icons" width="10" height="8">
-                <use href="./images/icons.svg#icon-click"></use>
-              </svg>
-            </span>
-            <label class="modal-label-checkbox" for="conditions">
-              I accept the terms and conditions of the
-              <span class="policy"> Privacy Policy</span>
-            </label>
             <input
               class="agree-click visually-hidden"
               type="checkbox"
-              name="conditions"
-              value="conditions"
-              id="conditions"
+              name="user-privacy"
+              value="true"
+              id="user-privacy"
+              checked
             />
+            <label class="modal-label-checkbox" for="user-privacy">
+              <span class="checkbox">
+                <svg class="icons" width="10" height="8">
+                  <use href="./images/icons.svg#icon-click"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a class="policy" href="">Privacy Policy</a>
+            </label>
           </div>
 
           <button class="modal-btn" type="submit">Send</button>
